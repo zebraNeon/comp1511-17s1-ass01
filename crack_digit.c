@@ -2,14 +2,14 @@
 // z5125769 ZHENYU YAO
 // 2017-04-22
 // COMP1511 ASGNMNT01
+// modified on the provided test_*.c in Lab07 written by Andrew Taylor
 
 #include <stdio.h>
 #include "captcha.h"
 
-int main(int argc, char *argv[]) { // modified on the provided test_*.c in Lab07 written by Andrew Taylor
-    int height, width; 
+int main(int argc, char *argv[]) { 
 
-    int result; // 
+    int height, width; 
 
     if (argc < 2) {
         fprintf(stderr, "Usage: %s <image-file>\n", argv[0]);
@@ -29,7 +29,8 @@ int main(int argc, char *argv[]) { // modified on the provided test_*.c in Lab07
         int box_pixels[box_height][box_width];
         copy_pixels(height, width, pixels, start_row, start_column, box_height, box_width, box_pixels);
     
-        printf("%d\n",crack(box_height, box_width, box_pixels)); // 'main' -> 'crack' hand over 
+        // 'main' -> 'crack' hand over 
+        printf("%d\n",crack(box_height, box_width, box_pixels)); 
     }
 
     return 0;

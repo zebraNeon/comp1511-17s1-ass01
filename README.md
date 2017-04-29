@@ -1,5 +1,17 @@
-Don't push changes to this repository directly.
+###README.md
 
-Don't change the repository via the web interface
+Source code for UNSW COMP1511 2017s1 ASGMNT01.
 
-Submit your work using give, and it will be automatically pushed to this repository.
+Usage:
+
+    $ make
+    $ ./crack_digit /dest/to/digit/file
+    $ ./crack_captcha /dest/to/captcha/file
+
+
+Current Success Rate:
+- 96% for digit
+- 81.2% for captcha
+
+
+Nothing for challenge

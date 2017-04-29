@@ -1,6 +1,6 @@
 // crack.c
 // z5125769 ZHENYU YAO
-// 2017-04-25
+// 2017-04-25 ~ 2017-04-29
 // COMP1511 ASGNMNT01
 
 #include <stdio.h>
@@ -29,13 +29,18 @@ int crack(int height, int width, int pixels[height][width]) {
         else
             return 9;
     } else {
-        if ((mouth_dir.u == 1 && mouth_dir.l == 0 && vt_balance > 0.54) || (mouth_dir.u == 0 && mouth_dir.l == 0 && vt_balance >= 0.56))
+        if ((mouth_dir.u == 1 && mouth_dir.l == 0 && vt_balance > 0.54) || 
+                (mouth_dir.u == 0 && mouth_dir.l == 0 && vt_balance >= 0.56))
             return 7;
-        else if ((mouth_dir.u == 1 && mouth_dir.l == 1) || (mouth_dir.u == 0 && mouth_dir.l == 1 && hr_balance <= 0.54))
+        else if ((mouth_dir.u == 1 && mouth_dir.l == 1) || 
+                (mouth_dir.u == 0 && mouth_dir.l == 1 && hr_balance <= 0.54))
             return 3;
-        else if ((mouth_dir.u == 2 && mouth_dir.l == 1) || (mouth_dir.u == 2 && mouth_dir.l == 0) || (mouth_dir.u == 0 && mouth_dir.l == 1)) 
+        else if ((mouth_dir.u == 2 && mouth_dir.l == 1) || 
+                (mouth_dir.u == 2 && mouth_dir.l == 0) || (mouth_dir.u == 0 && mouth_dir.l == 1)) 
             return 5;
-        else if ((mouth_dir.u == 1 && mouth_dir.l == 2) || (mouth_dir.u == 0 && mouth_dir.l == 2) || (mouth_dir.u == 1 && mouth_dir.l == 0 && aspect_r / density <= 3.5))
+        else if ((mouth_dir.u == 1 && mouth_dir.l == 2) || 
+                (mouth_dir.u == 0 && mouth_dir.l == 2) || 
+                (mouth_dir.u == 1 && mouth_dir.l == 0 && aspect_r / density <= 3.5))
             return 2;
         else 
             return 1;

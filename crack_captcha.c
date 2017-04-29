@@ -8,9 +8,8 @@
 #include "captcha.h"
 
 int main(int argc, char *argv[]) { 
+    
     int height, width; 
-
-    int result; // 
 
     if (argc < 2) {
         fprintf(stderr, "Usage: %s <image-file>\n", argv[0]);
@@ -36,7 +35,8 @@ int main(int argc, char *argv[]) {
             copy_pixels(height, width, pixels, start_rows[k], start_columns[k], 
                 boxs_height[k], boxs_width[k], box_pixels);
             
-            printf("%d",crack(boxs_height[k], boxs_width[k], box_pixels)); // 'main' -> 'crack' hand over
+            // 'main' -> 'crack' hand over
+            printf("%d", crack(boxs_height[k], boxs_width[k], box_pixels)); 
         } 
         printf("\n");
     }
